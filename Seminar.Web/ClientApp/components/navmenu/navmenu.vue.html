@@ -1,0 +1,53 @@
+<template>
+    <div class="main-nav">
+        <div class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Movie API</a>
+            </div>
+            <div class="clearfix"></div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li v-if="token == null">
+                        <router-link :to="{ name: 'register' }">
+                            Registracija
+                        </router-link>
+                    </li>
+                    <li v-if="token == null">
+                        <router-link :to="{ name: 'login' }">
+                            Prijava
+                        </router-link>
+                    </li>                    
+                    <li>
+                        <router-link :to="{ name: 'movies' }" :exact="true">
+                            Filmovi
+                        </router-link>
+                    </li>
+                    <li>
+                        <router-link :to="{ name: 'actors' }">
+                            Glumci
+                        </router-link>
+                    </li>
+                    <li>
+                        <router-link :to="{ name: 'types' }">
+                            Žanrovi
+                        </router-link>
+                    </li>
+                    <li>
+                        <router-link :to="{ name: 'studios' }">
+                            Filmski studiji
+                        </router-link>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style src="./navmenu.css" />
+<script src="./navmenu.ts"></script>

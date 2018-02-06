@@ -1,0 +1,47 @@
+<template>
+        <div>
+            <h1>Žanrovi</h1>
+            <router-link :to="{ name: 'typeCreate' }" class="btn btn-primary">
+                Novi žanr
+            </router-link>    
+            <table v-if="types.length" class="table">
+                <thead>
+                    <tr>
+                        <th>Naziv</th>
+                        <th>Opis</th>                    
+                        <th>Akcije</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in types">
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.description }}</td>                    
+                        <td>                            
+                            <ul class="list-inline">
+                                <li>
+                                    <router-link :to="{ name: 'typeDetails', params: { id: item.id } }" class="btn btn-default">
+                                        Detalji
+                                    </router-link>                            
+                                </li>
+                                <li>
+                                    <router-link :to="{ name: 'typeEdit', params: { id: item.id } }" class="btn btn-warning">
+                                        Izmijeni
+                                    </router-link>                            
+                                </li>
+                                <li>                                    
+                                    <button class="btn btn-danger text-muted" v-on:click="onDelete(item.id)">Obriši</button>
+                                </li>
+                                <li>                                    
+                                    <button class="btn btn-default text-muted" v-on:click="onWrongDelete(item.id)">Obriši (krivi api-version)</button>
+                                </li>
+                            </ul>                            
+                        </td>                        
+                    </tr>
+                </tbody>
+            </table>
+            <p v-else>Nema žanrova :D</p>
+        </div>
+    </template>
+    
+    <script src="./index.ts"></script>

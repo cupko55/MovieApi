@@ -1,0 +1,48 @@
+<template>
+    <div>
+        <h1>Fimovi</h1>
+        <router-link :to="{ name: 'movieCreate' }" class="btn btn-primary">
+            Novi film
+        </router-link> 
+        <table v-if="movies.length" class="table">
+            <thead>
+                <tr>
+                    <th>Ime</th>                    
+                    <th>Ocjena</th>
+                    <th>Broj nominacija</th>
+                    <th>Broj osvojenih nagrada</th>
+                    <th>Akcije</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in movies">
+                    <td>{{ item.name }}</td>                    
+                    <td>{{ item.rating }}</td>
+                    <td>{{ item.nominationsCount }}</td>
+                    <td>{{ item.nominationsWin }}</td>
+                    <td>
+                        <ul class="list-inline">
+                            <li>
+                                <router-link :to="{ name: 'movieDetails', params: { id: item.id } }" class="btn btn-default">
+                                    Detalji
+                                </router-link>
+                            </li>
+                            <li>
+                                <router-link :to="{ name: 'movieEdit', params: { id: item.id } }" class="btn btn-warning">
+                                    Izmijeni
+                                </router-link>
+                            </li>
+                            <li>
+                                <button class="btn btn-danger" v-on:click="onDelete(item.id)">Obriši</button>
+                            </li>
+                        </ul>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p v-else>Nema filmova :D</p>
+    </div>
+</template>
+
+<script src="./index.ts"></script>

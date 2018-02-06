@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Seminar.DAL\Seminar.DAL.csproj" />
+    <ProjectReference Include="..\Seminar.Model\Seminar.Model.csproj" />
+  </ItemGroup>
+
+</Project>

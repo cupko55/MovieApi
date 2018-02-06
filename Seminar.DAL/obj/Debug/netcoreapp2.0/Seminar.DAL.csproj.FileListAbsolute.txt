@@ -1,0 +1,11 @@
+C:\Users\Toni\source\repos\Seminar\Seminar.DAL\bin\Debug\netcoreapp2.0\Seminar.DAL.deps.json
+C:\Users\Toni\source\repos\Seminar\Seminar.DAL\bin\Debug\netcoreapp2.0\Seminar.DAL.dll
+C:\Users\Toni\source\repos\Seminar\Seminar.DAL\obj\Debug\netcoreapp2.0\Seminar.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Toni\source\repos\Seminar\Seminar.DAL\obj\Debug\netcoreapp2.0\Seminar.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Toni\source\repos\Seminar\Seminar.DAL\obj\Debug\netcoreapp2.0\Seminar.DAL.AssemblyInfoInputs.cache
+C:\Users\Toni\source\repos\Seminar\Seminar.DAL\obj\Debug\netcoreapp2.0\Seminar.DAL.AssemblyInfo.cs
+C:\Users\Toni\source\repos\Seminar\Seminar.DAL\bin\Debug\netcoreapp2.0\Seminar.DAL.pdb
+C:\Users\Toni\source\repos\Seminar\Seminar.DAL\bin\Debug\netcoreapp2.0\Seminar.Model.dll
+C:\Users\Toni\source\repos\Seminar\Seminar.DAL\bin\Debug\netcoreapp2.0\Seminar.Model.pdb
+C:\Users\Toni\source\repos\Seminar\Seminar.DAL\obj\Debug\netcoreapp2.0\Seminar.DAL.dll
+C:\Users\Toni\source\repos\Seminar\Seminar.DAL\obj\Debug\netcoreapp2.0\Seminar.DAL.pdb

@@ -1,0 +1,63 @@
+<template>    
+    <div v-if="movie">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>{{ movie.name }}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p><strong>Opsi: </strong>{{ movie.description }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p><strong>Ocjena: </strong> {{ movie.rating }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p><strong>Broj nominacija: </strong> {{ movie.nominationsCount }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p><strong>Broj nagrada: </strong> {{ movie.nominationsWin }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p><strong>Studio: </strong> {{ movie.studio.name }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Glumci</h3>                    
+                <ul v-if="movie.leadingActors.length">
+                    <li v-for="item in movie.leadingActors">
+                        <router-link :to="{ name: 'actorDetails', params: { id: item.id } }">
+                            {{ item.firstName}} {{ item.lastName }}
+                        </router-link>                        
+                    </li>
+                </ul>
+                <p v-else>Filmu nije pridružen ni jedan glumac</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Žanrovi</h3>                    
+                <ul v-if="movie.types.length">
+                    <li v-for="item in movie.types">
+                        <router-link :to="{ name: 'typeDetails', params: { id: item.id } }">
+                            {{ item.name}}
+                        </router-link>                        
+                    </li>
+                </ul>
+                <p v-else>Filmu nije pridružen ni jedan žanr</p>
+            </div>
+        </div>
+    </div>
+</template>        
+
+
+<script src="./details.ts"></script>

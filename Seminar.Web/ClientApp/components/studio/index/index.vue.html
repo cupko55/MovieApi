@@ -1,0 +1,44 @@
+<template>
+        <div>
+            <h1>Filmski studiji</h1>
+            <router-link :to="{ name: 'studioCreate' }" class="btn btn-primary">
+                Novi studio
+            </router-link>    
+            <table v-if="studios.length" class="table">
+                <thead>
+                    <tr>
+                        <th>Naziv</th>
+                        <th>Država</th>                    
+                        <th>Akcije</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in studios">
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.country }}</td>                    
+                        <td>                            
+                            <ul class="list-inline">
+                                <li>
+                                    <router-link :to="{ name: 'studioDetails', params: { id: item.id } }" class="btn btn-default">
+                                        Detalji
+                                    </router-link>                            
+                                </li>
+                                <li>
+                                    <router-link :to="{ name: 'studioEdit', params: { id: item.id } }" class="btn btn-warning">
+                                        Izmijeni
+                                    </router-link>                            
+                                </li>
+                                <li>                                    
+                                    <button class="btn btn-danger text-muted" v-on:click="onDelete(item.id)">Obriši</button>
+                                </li>
+                            </ul>                            
+                        </td>                        
+                    </tr>
+                </tbody>
+            </table>
+            <p v-else>Nema studija :D</p>
+        </div>
+    </template>
+    
+    <script src="./index.ts"></script>

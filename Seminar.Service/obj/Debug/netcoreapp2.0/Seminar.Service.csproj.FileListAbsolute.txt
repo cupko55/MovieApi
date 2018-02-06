@@ -1,0 +1,13 @@
+C:\Users\Toni\source\repos\Seminar\Seminar.Service\bin\Debug\netcoreapp2.0\Seminar.Service.deps.json
+C:\Users\Toni\source\repos\Seminar\Seminar.Service\bin\Debug\netcoreapp2.0\Seminar.Service.dll
+C:\Users\Toni\source\repos\Seminar\Seminar.Service\bin\Debug\netcoreapp2.0\Seminar.Service.pdb
+C:\Users\Toni\source\repos\Seminar\Seminar.Service\obj\Debug\netcoreapp2.0\Seminar.Service.csprojResolveAssemblyReference.cache
+C:\Users\Toni\source\repos\Seminar\Seminar.Service\obj\Debug\netcoreapp2.0\Seminar.Service.csproj.CoreCompileInputs.cache
+C:\Users\Toni\source\repos\Seminar\Seminar.Service\obj\Debug\netcoreapp2.0\Seminar.Service.AssemblyInfoInputs.cache
+C:\Users\Toni\source\repos\Seminar\Seminar.Service\obj\Debug\netcoreapp2.0\Seminar.Service.AssemblyInfo.cs
+C:\Users\Toni\source\repos\Seminar\Seminar.Service\obj\Debug\netcoreapp2.0\Seminar.Service.dll
+C:\Users\Toni\source\repos\Seminar\Seminar.Service\obj\Debug\netcoreapp2.0\Seminar.Service.pdb
+C:\Users\Toni\source\repos\Seminar\Seminar.Service\bin\Debug\netcoreapp2.0\Seminar.DAL.dll
+C:\Users\Toni\source\repos\Seminar\Seminar.Service\bin\Debug\netcoreapp2.0\Seminar.Model.dll
+C:\Users\Toni\source\repos\Seminar\Seminar.Service\bin\Debug\netcoreapp2.0\Seminar.DAL.pdb
+C:\Users\Toni\source\repos\Seminar\Seminar.Service\bin\Debug\netcoreapp2.0\Seminar.Model.pdb

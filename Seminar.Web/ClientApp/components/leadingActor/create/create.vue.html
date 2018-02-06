@@ -1,0 +1,49 @@
+<template>
+    <div id="createType">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Dodavanje glumca</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <form method="post" action="api/Type" @submit.prevent="onSubmit" @keydown="errors.clear($event.target.name)">                    
+                    <div class="form-horizonatl">
+                        <div class="form-group">
+                            <label for="FirstName" class="control-label">Ime</label>
+                            <input type="text" name="FirstName" class="form-control col-lg-5" v-model="firstName">
+                            <span class="text-danger" v-text="errors.get('FirstName')"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="LastName" class="control-label">Prezime</label>
+                            <input type="text" name="LastName" class="form-control col-lg-5" v-model="lastName">
+                            <span class="text-danger" v-text="errors.get('LastName')"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Price" class="control-label">Cijena angažmana</label>
+                            <input type="text" name="Price" class="form-control col-lg-5" v-model="price">
+                            <span class="text-danger" v-text="errors.get('Price')"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="Country" class="control-label">Država rođenja</label>
+                            <input type="text" name="Country" class="form-control col-lg-5" v-model="country">
+                            <span class="text-danger" v-text="errors.get('Country')"></span>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group">                              
+                            <input type="submit" class="btn btn-primary" value="Spremi">
+                        </div>
+                    </div>                     
+                </form>
+            </div>
+        </div>
+            
+    </div>
+</template>
+
+
+<script src="./create.ts"></script>

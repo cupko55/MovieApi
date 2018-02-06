@@ -1,0 +1,44 @@
+<template>
+    <div>
+        <h1>Glumci</h1>
+        <router-link :to="{ name: 'actorCreate' }" class="btn btn-primary">
+            Novi glumac
+        </router-link> 
+        <table v-if="actors.length" class="table">
+            <thead>
+                <tr>
+                    <th>Ime</th>
+                    <th>Prezime</th>                    
+                    <th>Akcije</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in actors">
+                    <td>{{ item.firstName }}</td>
+                    <td>{{ item.lastName }}</td>                    
+                    <td>
+                        <ul class="list-inline">
+                            <li>
+                                <router-link :to="{ name: 'actorDetails', params: { id: item.id} }" class="btn btn-default">
+                                    Detalji
+                                </router-link>
+                            </li>
+                            <li>
+                                <router-link :to="{ name: 'actorEdit', params: { id: item.id} }" class="btn btn-warning">
+                                    Izmijeni
+                                </router-link>
+                            </li>
+                            <li>
+                                <button class="btn btn-danger" v-on:click="onDelete(item.id)">Obriši</button>
+                            </li>
+                        </ul>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p v-else>Nema glumaca :D</p>
+    </div>
+</template>
+
+<script src="./index.ts"></script>
